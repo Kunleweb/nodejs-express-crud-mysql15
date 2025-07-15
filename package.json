@@ -1,0 +1,26 @@
+{
+  "name": "simple-crud",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunleweb/nodejs-express-crud-mysql15.git"
+  },
+  "author": "Kunleweb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kunleweb/nodejs-express-crud-mysql15/issues"
+  },
+  "homepage": "https://github.com/Kunleweb/nodejs-express-crud-mysql15#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.2",
+    "nodemon": "^3.1.10"
+  }
+}
