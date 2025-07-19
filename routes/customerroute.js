@@ -1,23 +1,20 @@
-const express= require('express')
-const router = express.Router();
-const routeController = require('./../controllers/routeController')
+import { Router } from "express";
+import {
+  createCustomers,
+  deleteCustomer,
+  editCustomer,
+  renderCustomers,
+  updateCustomer,
+} from "./../controllers/routeController.js";
+const router = Router();
 
+router.get("/", renderCustomers);
+router.post("/add", createCustomers);
 
-router
-.route('/')
-.get(routeController.showCustomers)
+router.route('/update/:id')
+.get(editCustomer)
+.post(updateCustomer)
 
-router
-.route('/add')
-.post(routeController.addCustomers)
+router.delete("/delete/:id", deleteCustomer);
 
-router
-.route('/update/id')
-.patch(routeController.updateCustomers)
-
-
-router
-.route('/delete/id')
-.delete(routeController.deleteCustomers)
-
-
+export default router;
